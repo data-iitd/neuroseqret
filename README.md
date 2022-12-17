@@ -2,7 +2,7 @@
 Artifacts related to the AAAI 2022 paper "Learning Temporal Point Processes for Efficient Retrieval of Continuous Time Event Sequences".
 
 ## Requirements
-Use a python-3.7 environment and install PyTorch v1.6.0, TorchVision v0.4.2, and Rank-Eval v0.0.1.
+Use a python-3.7 environment and install PyTorch v1.6.0, TorchVision v0.4.2, and Rank-Eval v0.0.1. More details are given in requirements.txt file. 
 
 ## Execution Instructions
 ### Dataset Format

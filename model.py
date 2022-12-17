@@ -257,9 +257,9 @@ class NeuroSeqRet(torch.nn.Module):
 		# diff_loss = self.to_positive(dist_pos.sum(dim=-1) - dist_neg.sum(dim=-1))
 
 		# Maching the distance based simmilarity between query and corpus
-		wasserstein = WassDistance(eps=1, max_iter=100)
-		dist_pos, P, C = wasserstein(query_log_feats, pos_log_feats, self.dev)
-		dist_neg, P, C = wasserstein(query_log_feats, neg_log_feats, self.dev)
+		embdist = Emd_Dist(eps=1, max_iter=100)
+		dist_pos, P, C = embdist(query_log_feats, pos_log_feats, self.dev)
+		dist_neg, P, C = embdist(query_log_feats, neg_log_feats, self.dev)
 		dist_pos = dist_pos.to(self.dev)
 		dist_neg = dist_neg.to(self.dev)
 
